@@ -62,9 +62,10 @@ export default function SigninScreen(props) {
                 {error && <MessageBox variant="danger">{error}</MessageBox>}
                 <div>
                     <label />
-                    <div>
-                        New customer? <Link to="/register">Create your account</Link>
-                    </div>
+                    New customer?{' '}
+                    <Link to={`/register?redirect=${redirect}`}>
+                        Create your account
+                    </Link>
                 </div>
             </form>
         </div>
